@@ -10,7 +10,10 @@ def index():
     file = open("SG.txt", 'a')
     file.write(name + '\n') # appends the [name] to the file extra line
     file.close()
-    return render_template('index.html',name=name)
+    infile = open("SG.txt",'r') #omit
+    lines = infile.readlines()
+    infile.close()
+    return render_template('index.html',name=name,lines=lines)
   return render_template('index.html')
 
 

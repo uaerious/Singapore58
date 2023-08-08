@@ -11,7 +11,9 @@
       <input type="text" name="name"/><br>
       <input type="submit" value="SIGN UP!">
     </form>
-    {{ name }}
+    {% for line in lines %}
+    Name: {{ line }}<br>
+    {% endfor %}
       
   </body>
 </html>
